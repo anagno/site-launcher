@@ -167,7 +167,7 @@ function display_site_down_page( $options, $status, $path )
 	<div class="container">
 		<h1><?php bloginfo( 'name' ); ?> <?php echo $message_text; ?></h1>
 		<p class="fineprint"><?php echo $fine_print; ?></p>
-		<?php if ( $show_login != 0 ) { ?>
+		<?php if ( $show_login != 0 && isset($_SERVER['HTTPS'])) {?>
 		<br /><p><?php echo $login_message; ?></p>
 		<div style="width:400px; margin:10px auto;"><?php wp_login_form( ); ?> </div>
 		<?php } ?>
